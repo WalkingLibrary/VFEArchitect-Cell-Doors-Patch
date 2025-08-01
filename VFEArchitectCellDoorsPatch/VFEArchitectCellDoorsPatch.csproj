@@ -44,12 +44,27 @@
         <Reference Include="VFEArchitect">
             <HintPath>..\resources\VFEArchitect.dll</HintPath>
         </Reference>
+
+        <Reference Include="UnityEngine">
+            <HintPath>..\resources\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>..\resources\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+            <HintPath>..\resources\UnityEngine.IMGUIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+            <HintPath>..\resources\UnityEngine.TextRenderingModule.dll</HintPath>
+        </Reference>
+
     </ItemGroup>
 
 
     <ItemGroup>
         <Compile Include="Source\ModEntry.cs" />
         <Compile Include="Source\Patch_Region_Allows.cs" />
+        <Compile Include="Source\Settings.cs" />
     </ItemGroup>
 
     <ItemGroup>

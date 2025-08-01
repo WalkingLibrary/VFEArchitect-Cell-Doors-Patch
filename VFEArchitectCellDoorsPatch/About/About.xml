@@ -10,7 +10,4 @@
     <loadAfter>
         <li>VanillaExpanded.VFEArchitect</li>
     </loadAfter>
-    <modDependencies>
-        <li>brrainz.harmony</li>
-    </modDependencies>
 </ModMetaData>

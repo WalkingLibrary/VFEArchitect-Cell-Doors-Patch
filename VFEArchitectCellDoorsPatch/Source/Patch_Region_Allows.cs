@@ -4,7 +4,7 @@ using Verse;
 using System.Reflection.Emit;
 using System.Collections.Generic;
 
-namespace VanillaFurnitureExpandedCellDoorsPatch
+namespace VFEArchitectCellDoorsPatch
 {
     [StaticConstructorOnStartup]
     public static class PatchInit
@@ -43,14 +43,21 @@ namespace VanillaFurnitureExpandedCellDoorsPatch
 
         public static bool DontBashCellDoors(bool canBash, Pawn pawn, Building_Door door)
         {
-            Log.Message($"Checking bash: canBash={canBash}, isPrisoner={pawn?.IsPrisoner}, door={door?.def?.defName}");
+            if (ModEntry.Settings.enableDebugLogging)
+            {
+                Log.Message($"Checking bash: canBash={canBash}, isPrisoner={pawn?.IsPrisoner}, door={door?.def?.defName}");
+            }
 
             if (!canBash)
                 return false;
 
             if (pawn != null && pawn.IsPrisoner && door.def.defName == "VFEArch_CellDoor")
             {
-                Log.Message("Blocking cell door bash attempt.");
+                if (ModEntry.Settings.enableDebugLogging)
+                {
+                    Log.Message("Blocking cell door bash attempt.");
+                }
+
                 return false;
             }
 
