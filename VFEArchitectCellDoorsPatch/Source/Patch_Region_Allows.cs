@@ -43,7 +43,7 @@ namespace VFEArchitectCellDoorsPatch
 
         public static bool DontBashCellDoors(bool canBash, Pawn pawn, Building_Door door)
         {
-            if (ModEntry.Settings.enableDebugLogging)
+            if (VFEArchitectCellDoorsPatch.ModEntry.Settings.enableDebugLogging)
             {
                 Log.Message($"Checking bash: canBash={canBash}, isPrisoner={pawn?.IsPrisoner}, door={door?.def?.defName}");
             }
@@ -53,7 +53,7 @@ namespace VFEArchitectCellDoorsPatch
 
             if (pawn != null && pawn.IsPrisoner && door.def.defName == "VFEArch_CellDoor")
             {
-                if (ModEntry.Settings.enableDebugLogging)
+                if (VFEArchitectCellDoorsPatch.ModEntry.Settings.enableDebugLogging)
                 {
                     Log.Message("Blocking cell door bash attempt.");
                 }
