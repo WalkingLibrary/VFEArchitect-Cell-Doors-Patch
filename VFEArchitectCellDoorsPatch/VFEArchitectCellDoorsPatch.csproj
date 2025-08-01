@@ -85,6 +85,10 @@
             <UnwantedDlls Include="bin\Debug\FinalModFolder\1.6\Assemblies\0Harmony.dll" />
             <UnwantedDlls Include="bin\Debug\FinalModFolder\1.6\Assemblies\Assembly-CSharp.dll" />
             <UnwantedDlls Include="bin\Debug\FinalModFolder\1.6\Assemblies\VFEArchitect.dll" />
+            <UnwantedDlls Include="bin\Debug\FinalModFolder\1.6\Assemblies\UnityEngine.dll" />
+            <UnwantedDlls Include="bin\Debug\FinalModFolder\1.6\Assemblies\UnityEngine.CoreModule.dll" />
+            <UnwantedDlls Include="bin\Debug\FinalModFolder\1.6\Assemblies\UnityEngine.IMGUIModule.dll" />
+            <UnwantedDlls Include="bin\Debug\FinalModFolder\1.6\Assemblies\UnityEngine.TextRenderingModule.dll" />
         </ItemGroup>
         <Delete Files="@(UnwantedDlls)" />
     </Target>
